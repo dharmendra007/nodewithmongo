@@ -16,7 +16,14 @@ app.use('/agencyClient', require('./agencyClient/agencyClient.controller'));
 app.use(errorHandler);
 
 // start server
-const port = 3000;
-const server = app.listen(port, function() {
-    console.log('Server listening on port ' + port);
+// const port = 3000;
+// const server = app.listen(port, function() {
+//     console.log('Server listening on port ' + port);
+// });
+
+var server_port = 3000;
+
+var server_host = process.env.YOUR_HOST || '0.0.0.0';
+server.listen(server_port, server_host, function() {
+    console.log('Listening on port %d', server_port);
 });
