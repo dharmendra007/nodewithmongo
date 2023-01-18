@@ -17,6 +17,8 @@ app.use(errorHandler);
 
 // start server
 const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
-const server = app.listen(port, function() {
+const host = '0.0.0.0';
+
+const server = app.listen(port, host, (req, res) => {
     console.log('Server listening on port ' + port);
 });
