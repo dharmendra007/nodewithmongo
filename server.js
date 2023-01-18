@@ -17,8 +17,6 @@ app.use(errorHandler);
 
 // start server
 const port = 3000;
-const host = '0.0.0.0';
-
-const server = app.listen(port, host, (req, res) => {
+const server = app.listen(port, function() {
     console.log('Server listening on port ' + port);
 });
