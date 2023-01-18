@@ -4,7 +4,6 @@
     "description": "NodeJS + MongoDB API",
     "license": "MIT",
     "scripts": {
-        "postinstall": "npm run build",
         "start": "node server.js",
         "start-dev": "nodemon server.js"
     },
