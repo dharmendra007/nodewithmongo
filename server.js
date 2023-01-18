@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("Success");
+})
+
 // api routes
 app.use('/agencyClient', require('./agencyClient/agencyClient.controller'));
 
